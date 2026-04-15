@@ -1,0 +1,1 @@
+int CeldasVacias(int tablero[N][N])
