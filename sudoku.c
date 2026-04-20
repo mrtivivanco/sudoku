@@ -142,26 +142,28 @@ int ProbarValores(int tablero[9][9], int fila, int columna, int num) {
  }
 
 int main() {
-    int matriz[9][9] = {
-        {5,3,0,0,7,0,0,0,0},
-        {6,0,0,1,9,5,0,0,0},
-        {0,9,8,0,0,0,0,6,0},
-        {8,0,0,0,6,0,0,0,3},
-        {4,0,0,8,0,3,0,0,1},
-        {7,0,0,0,2,0,0,0,6},
-        {0,6,0,0,0,0,2,8,0},
-        {0,0,0,4,1,9,0,0,5},
-        {0,0,0,0,8,0,0,7,9}
-    };
+
+    int matriz[9][9];
+    printf("Ingrese los valores de la matriz:\n");
+
+    for(int i = 0; i < 9; i++) {
+        for(int j = 0; j < 9; j++) {
+            printf("Elemento [%d][%d]:", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
     //imprimimos el tablero
-    printf("Tablero: \n");
+
+    printf("Tablero ingresado: \n");
     for (int i = 0; i < 9; i++){
         printf("|");
         for(int j = 0; j < 9; j++){
             printf("%d", matriz[i][j]);
         }
         printf("|\n");
-    }
+    } 
+
     //si se soluciono o no
     if (resolverSudoku(matriz) == 1) {
     printf("Sudoku resuelto: \n");
