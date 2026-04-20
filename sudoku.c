@@ -130,6 +130,7 @@ int ProbarValores(int tablero[9][9], int fila, int columna, int num) {
     return ProbarValores(tablero, fila, columna, num + 1);
 }
 
+//funcion que resuelve el sudoku
  int resolverSudoku(int tablero[9][9]) {
         int fila;
         int columna;
@@ -164,7 +165,7 @@ int main() {
         printf("|\n");
     } 
 
-    //si se soluciono o no
+    //ejecutamos resolverSudoku para ver si se soluciono o no
     if (resolverSudoku(matriz) == 1) {
     printf("Sudoku resuelto: \n");
     for (int i = 0; i < 9; i++) {
